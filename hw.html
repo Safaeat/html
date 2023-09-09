@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+</head>
+<body>
+    <h1>User Registration</h1>
+    <form id="registrationForm" action="registration.html" method="post">
+        <label for="name">Name of the student:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="studentId">Student ID:</label>
+        <input type="text" id="studentId" name="studentId" required><br><br>
+
+        <label for="bloodGroup">Blood group:</label>
+        <input type="text" id="bloodGroup" name="bloodGroup" required><br><br>
+
+        <label>Sex:</label><br>
+        <input type="radio" id="male" name="sex" value="Male" required>
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="sex" value="Female" required>
+        <label for="female">Female</label><br><br>
+
+        <label for="phoneNumber">Phone number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required><br><br>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="Bangladesh" selected>Bangladesh</option>
+            <option value="Canada">Canada</option>
+            <option value="USA">USA</option>
+            <option value="Australia">Australia</option>
+        </select><br><br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea><br><br>
+
+        <label>Comments:</label><br>
+        <label for="comments" id="commentsLabel">No comments are allowed.</label><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        // Prevent users from typing in the comments textarea
+        const commentsTextarea = document.getElementById("commentsLabel");
+        commentsTextarea.style.color = "gray";
+        commentsTextarea.style.fontStyle = "italic";
+        commentsTextarea.style.pointerEvents = "none";
+    </script>
+</body>
+</html>
